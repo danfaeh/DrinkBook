@@ -1,0 +1,10 @@
+<h1>Mixers :</h1>
+  <table>
+    <tr>
+      <% @ingredients.each do |ingredient| %>
+        <% if ingredient.alcoholic == false%>
+          <td><%= ingredient.name %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  </table>

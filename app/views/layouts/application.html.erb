@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DrinkApp</title>
+  <title>MixBook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="<%= ('/style.css') %>">
+  <script src="app.js"></script>
 </head>
 <body>
 
-<%= yield %>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1><a href="/">MixBook</a></h1>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="/liquors">Liquors</a></li>
+          <li><a href="/mixers">Mixers</a></li>
+          <li><a href="/recipes">My Recipes</a></li>
+
+        <%if current_user == nil %>
+          <li><a href="/login">Login</a></li>
+        <%else%>
+          <li><%= link_to "logout", logout_path, :method => :delete %></li>
+        <%end%>
+
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="content">
+    <div class="container">
+      <%= yield %>
+      <%= console %>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrapper">
+      <ul>
+        <li><a href="/faqs">About Us</a></li>      
+        <li><a href="http://liquor.com/jobs" target="_blank">Careers</a></li>
+        <li><a href="https://github.com/danfaeh" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/danfaeh" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div> 
+  </footer>
 
 </body>
 </html>

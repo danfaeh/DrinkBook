@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
-  root to: "users#index"
-  get "/users", to: "users#index", as: "users"
-  get "/users/new", to: "users#new", as: "new_user"  
-  post "/users", to: "users#create"
-  get "/users/:id", to: "users#show"
+  root to: "ingredients#index"
 
-  get "/sign_in", to: "sessions#new"
+  get "/login", to: "sessions#new", as: "login"
   post "/sessions", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy", as: "logout"
+
+  get "/sign_up", to: "users#new", as: "sign_up"
+
+  get "/liquors", to: "ingredients#index", as: "liquors"
+  get "/mixers", to: "ingredients#mixers", as: "mixers"
+
+  resources :users, :recipes, :ingredients
 
 end

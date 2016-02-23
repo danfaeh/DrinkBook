@@ -1,17 +1,16 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users= User.all
     render :index
   end
 
-  def new
+  def new #maybe use a modal for this instead
     @user = User.new
     render :new
   end
 
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password)
     @user = User.create(user_params)
     login(@user) # <-- login the user
     redirect_to "/users/#{@user.id}" # <-- go to show
@@ -25,9 +24,13 @@ class UsersController < ApplicationController
   # def edit
   # end
 
-
-
   # def delete
   # end
+
+private 
+
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
+  end
 
 end
