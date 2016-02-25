@@ -1,0 +1,21 @@
+<h1>Build Your Recipe</h1>
+
+<%= form_for @recipe do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Recipe Name" %>
+  </div>
+  <div>
+    <%= f.text_field :description, placeholder: "Description" %>
+  </div>
+    <div>
+    <%= f.text_field :image, placeholder: "Image (optional)" %>
+  </div>
+
+	<% @ingredients.each do |ingredient| %>
+		<input type="checkbox" name="<%=ingredient.name%>" value="<%=ingredient.name%>"> <%=ingredient.name%> <br>
+	<% end %>
+
+  <%= f.submit "Add Drink" %>
+<% end %> 
+
+<br><br><br><br>

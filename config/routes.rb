@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: "ingredients#index"
+  root to: "pages#home", as: "home"
+
+  get "/pages/:page", to: "pages#faq"
 
   get "/login", to: "sessions#new", as: "login"
   post "/sessions", to: "sessions#create"
@@ -8,9 +10,10 @@ Rails.application.routes.draw do
 
   get "/sign_up", to: "users#new", as: "sign_up"
 
-  get "/liquors", to: "ingredients#index", as: "liquors"
+  get "/liquors", to: "ingredients#liquors", as: "liquors"
   get "/mixers", to: "ingredients#mixers", as: "mixers"
+  get "/ingredients/:id", to: "ingredients#show", as: "ingredient"
 
-  resources :users, :recipes, :ingredients
+  resources :users, :recipes
 
 end

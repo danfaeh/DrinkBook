@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require list
+//= require list.pagination
+//= require list.fuzzysearch
+
+console.log("JS is working");

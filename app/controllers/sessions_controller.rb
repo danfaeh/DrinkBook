@@ -11,11 +11,11 @@ class SessionsController < ApplicationController
       login(@user)
       redirect_to "/recipes"
     else
-      p @user
-      redirect_to "/sign_up"
+      redirect_to "/login"
+      flash[:notice] = "username / password do not match. Try Again."
     end
   end
-
+ 
   def destroy
     logout
     redirect_to "/"

@@ -1,8 +1,8 @@
 class IngredientsController < ApplicationController
 
-  def index
+  def liquors
     @ingredients = Ingredient.all
-    render :index
+    render :liquors
   end
 
   def mixers
@@ -11,7 +11,7 @@ class IngredientsController < ApplicationController
   end
 
   def show #dont think i need this
-    @ingredients = Ingredient.find(params[:id])
+    @recipes = Ingredient.find(params[:id]).recipes
     render :show
   end
 end

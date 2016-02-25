@@ -1,12 +1,12 @@
 
-<h1>Mixers :</h1>
+<h1>Liquors :</h1>
 <br><br><br><br><br><br>
-  <table>
+  <table class="table">
     <tr>
     <% a = @ingredients.first.id%>
     <% b = @ingredients.count%>
       <% for i in a..b%>
-      	<% if @ingredients.find(i).alcoholic == false%>
+      	<% if @ingredients.find(i).alcoholic == true%>
           <td onclick="window.location.href='/ingredients/<%= i %>';"><%= @ingredients.find(i).name %></td>
         <%end%>  
       <% end %>

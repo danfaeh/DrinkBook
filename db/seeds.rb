@@ -8,9 +8,8 @@
 
 # User.create(username: 'Texas-Pete', email: "tp@gmail.com", password_digest: "1234")
 
-Recipe.create(name: 'Bloody Mary', description: "2 part tomato juice, 1 part vodka")
-Recipe.create(name: 'Rum and Coke', description: "2 part coke, 1 part rum")
-
+Recipe.create(name: 'Bloody Mary', description: "2 part tomato juice, 1 part vodka", image:"http://liquor.s3.amazonaws.com/wp-content/uploads/2012/01/classic-bloody-mary.jpg")
+Recipe.create(name: 'Rum and Coke', description: "2 part coke, 1 part rum", image:"http://talltalesfromkansas.typepad.com/.a/6a01538dee917a970b01a511949884970c-pi")
 
 Ingredient.create(name: 'Vodka', alcoholic: true)
 Ingredient.create(name: 'Rum', alcoholic: true)
@@ -31,3 +30,11 @@ Ingredient.create(name: 'Tonic', alcoholic: false)
 Ingredient.create(name: 'Orange Juice', alcoholic: false)
 Ingredient.create(name: 'Pineapple Juice', alcoholic: false)
 Ingredient.create(name: 'Cranberry Juice', alcoholic: false)
+Ingredient.create(name: 'Triple Sec', alcoholic: false)
+Ingredient.create(name: 'Simple Syrup', alcoholic: false)
+Ingredient.create(name: 'Tomato Juice', alcoholic: false)
+
+RecipeIngredient.create(recipe_id: 1, ingredient_id: 1)
+RecipeIngredient.create(recipe_id: 1, ingredient_id: 21)
+RecipeIngredient.create(recipe_id: 2, ingredient_id: 2)
+RecipeIngredient.create(recipe_id: 2, ingredient_id: 10)
