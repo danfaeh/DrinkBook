@@ -4,7 +4,7 @@
  */
 
 html { 
-  background: url("cover.jpg") no-repeat center center fixed;
+  background: url("/cover.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
