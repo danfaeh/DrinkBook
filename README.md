@@ -2,7 +2,7 @@
 Where you go for all your mixed drink needs
 
 ##Link
-Check out the app online [here!](https://pacific-chamber-89211.herokuapp.com/recipes)
+Check out the app online [here!](https://pacific-chamber-89211.herokuapp.com)
 
 ##Description:
 
@@ -23,9 +23,9 @@ A drink recipe app that compiles all your favorite recipes, and can even show ot
 
 ###Planning Stage
 UserStories:
-![picture alt](UserStories.png)
-WireFrame
-![picture alt](WireFrame.png)
+![picture alt](app/assets/images/UserStories.png?raw=true)
+WireFrame:
+![picture alt](app/assets/images/WireFrame.png?raw=true)
 
 ##Installation
 
