@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get "/mixers", to: "ingredients#mixers", as: "mixers"
   get "/ingredients/:id", to: "ingredients#show", as: "ingredient"
 
+  get "/users/:id/recipes", to: "recipes#user", as: "user_recipe"
+
   resources :users, :recipes
 
 end

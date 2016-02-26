@@ -1,17 +1,176 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
 
+html { 
+  background: url("cover.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 
+body {
+  width: 100%;
+  margin: auto;
+  background: transparent;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  text-shadow:
+    3px 3px 0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+h4{
+  margin: 38px 0;
+}
+
+table{
+  margin: 0 auto;
+  border-spacing: 18px 18px;
+}
+
+td {
+  border: solid 1px black;
+  background: rgba(245, 185, 115,.8);
+}
+
+th {
+  text-align: center;
+  font-weight: bold;
+  border: solid 1px black;
+  background: rgba(0,73,32,.9);
+  color: white;
+}
+
+td:hover {
+  background: rgba(255,255,255,1);
+  cursor: pointer;
+}
+
+#mixer_list {
+  margin: 0, auto;
+}
+
+#title_row{
+  
+}
+
+.i {
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+  background: rgba(245, 185, 115,.8);
+  border: solid 1px black;
+  margin: 0 auto;
+}
+
+ .i:hover {
+  font-weight: bold;
+  background: rgba(255,255,0,.8);
+  cursor: pointer;
+ }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  margin-top: 80px;
+}
+
+#new_user {
+  text-align: center;
+}
+
+input {
+  margin: 20px;
+  height: 25px;
+  text-align: center;
+  font-weight: 900;
+  font-size: small; 
+}
+
+#recipe_img {
+  width: 400px;
+  height: 380px;
+  border: 7px solid black;
+  border-radius: 20px;
+}
+
+#myCarousel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*-----------Nav Bar------------*/
+
+header {
+  background-color: #222;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  float: left;
+  font-family: "Helvetica";
+  font-size: 15px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header li {
+  list-style: none;
+  float: left;
+  margin-left: 45px;
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+.nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.faq_list {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.5);
+}
+
+/*-----------footer------------*/
+
+footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: #222;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; 
+    float: right;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  margin: 0 0 15px 35px;
+  font-size: 16px;
+  float: left;
+}

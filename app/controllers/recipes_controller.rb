@@ -36,6 +36,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.all
+    render :edit
   end
 
   def update
@@ -52,6 +54,11 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe_indredients = Ingredient.find(params[:id])
     render :show
+  end
+
+  def user
+    @recipes = User.find(params[:id]).recipes
+    render :user
   end
     
   private

@@ -1,5 +1,5 @@
 <table class = "table">
-   <caption><h1> All <%= @ingredient.name %> Recipes :</h1></caption>
+   <caption><h1> <%= current_user.username%>'s Recipes :</h1></caption>
    
    <thead>
       <tr id="title_row">
@@ -16,10 +16,8 @@
       </tr>
        <% end %>
    </tbody>
-  
+	
 </table>
 
-  <br><br><br>
-
- 	<button class ="btn" onClick="window.location.href='/liquors';">Back to Liquors</button>
- 	<button class ="btn" onClick="window.location.href='/mixers';">Back to Mixers</button>
+<br><br>
+<button class="new_recipe" onclick="window.location.href='/recipes/new';">Create New Recipe</button>

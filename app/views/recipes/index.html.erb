@@ -1,28 +1,17 @@
-
-
-
- 
- 
- 
-
-
-
-
-
 <table class = "table">
    <caption><h1> <%= current_user.username%>'s Recipes :</h1></caption>
    
    <thead>
-      <tr>
-         <th>name</th>
-         <th>description</th>
+      <tr id="title_row">
+         <th>Recipe Name:</th>
+         <th>Description:</th>
       </tr>
    </thead>
    
    <tbody>
      <% @recipes.each do |recipe| %>
       <tr>
-         <td><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></td>
+        <td onclick="window.location.href='/recipes/<%= recipe.id %>';"><strong><%= recipe.name %></strong></td>
          <td><%= recipe.description %></td>
       </tr>
        <% end %>

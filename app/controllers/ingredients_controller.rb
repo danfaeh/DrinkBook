@@ -10,8 +10,9 @@ class IngredientsController < ApplicationController
     render :mixers
   end
 
-  def show #dont think i need this
+  def show
     @recipes = Ingredient.find(params[:id]).recipes
+    @ingredient = Ingredient.find(params[:id])
     render :show
   end
 end
