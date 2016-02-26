@@ -52,6 +52,20 @@ td:hover {
   cursor: pointer;
 }
 
+#logo_text {
+  display: inline;
+}
+
+#logo_img {
+    height: 40px;
+    width: 50px;
+    margin-bottom: 12px;
+}
+
+#img_span {
+  float: left;
+}
+
 #mixer_list {
   margin: 0, auto;
 }
