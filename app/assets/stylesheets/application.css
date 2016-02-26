@@ -56,8 +56,11 @@ td:hover {
   margin: 0, auto;
 }
 
-#title_row{
-  
+.boxes {
+  height: 800px;
+  width: 200px;
+  background: rgba(245, 185, 115,.8);
+  margin: 0 auto;
 }
 
 .i {
@@ -89,10 +92,20 @@ td:hover {
   text-align: center;
 }
 
+.long_input {
+  width: 300px;
+  text-align: center;
+}
+
+.short_input {
+  width: 200px;
+  text-align: center;
+}
+
 input {
   margin: 20px;
   height: 25px;
-  text-align: center;
+/*  text-align: center;*/
   font-weight: 900;
   font-size: small; 
 }

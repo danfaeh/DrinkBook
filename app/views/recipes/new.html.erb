@@ -2,18 +2,20 @@
 
 <%= form_for @recipe do |f| %>
   <div>
-    <%= f.text_field :name, placeholder: "Recipe Name" %>
+    <%= f.text_field :name, :class => "short_input",placeholder: "Recipe Name" %>
   </div>
   <div>
-    <%= f.text_field :description, placeholder: "Description" %>
+    <%= f.text_field :description, :class => "long_input", placeholder: "Description" %>
   </div>
     <div>
-    <%= f.text_field :image, placeholder: "Image URL (must include http://)" %>
+    <%= f.text_field :image, :class => "long_input", placeholder: "Image URL (starting with http://)" %>
   </div>
 
+  <div class="boxes">
 	<% @ingredients.each do |ingredient| %>
 		<input type="checkbox" name="<%=ingredient.name%>" value="<%=ingredient.name%>"> <%=ingredient.name%> <br>
 	<% end %>
+  </div>
 
   <%= f.submit "Add Drink" %>
 <% end %> 
